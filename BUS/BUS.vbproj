@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FE743CF6-B84D-46E1-ACD9-7F8734D22514}</ProjectGuid>
+    <ProjectGuid>{83916F23-CD85-48E1-96F7-94CB45082065}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>DTO</RootNamespace>
-    <AssemblyName>DTO</AssemblyName>
+    <RootNamespace>BUS</RootNamespace>
+    <AssemblyName>BUS</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
@@ -18,7 +18,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>DTO.xml</DocumentationFile>
+    <DocumentationFile>BUS.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -27,7 +27,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>DTO.xml</DocumentationFile>
+    <DocumentationFile>BUS.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -63,12 +63,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaoCaoCongNoDTO.vb" />
-    <Compile Include="BaoCaoTonDTO.vb" />
-    <Compile Include="ChiTietHoaDonDTO.vb" />
-    <Compile Include="ChiTietPhieuNhapDTO.vb" />
-    <Compile Include="HoaDonDTO.vb" />
-    <Compile Include="KhachHangDTO.vb" />
+    <Compile Include="BaoCaoCongNoBUS.vb" />
+    <Compile Include="BaoCaoTonBUS.vb" />
+    <Compile Include="ChiTietHoaDonBUS.vb" />
+    <Compile Include="HoaDonBUS.vb" />
+    <Compile Include="KhachHangBUS.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -84,10 +83,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="PhieuNhapDTO.vb" />
-    <Compile Include="PhieuThuTienDTO.vb" />
-    <Compile Include="SachDTO.vb" />
-    <Compile Include="ThamSoDTO.vb" />
+    <Compile Include="PhieuNhapBUS.vb" />
+    <Compile Include="PhieuThuTienBUS.vb" />
+    <Compile Include="SachBUS.vb" />
+    <Compile Include="ThamSoBUS.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -107,6 +106,16 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAO\DAO.vbproj">
+      <Project>{59624841-f1c0-4ca2-934c-2b2fb4d066b5}</Project>
+      <Name>DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.vbproj">
+      <Project>{fe743cf6-b84d-46e1-acd9-7f8734d22514}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
